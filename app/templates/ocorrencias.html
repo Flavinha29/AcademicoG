@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Ocorrências</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Ocorrências</h2>
+    <a href="/ocorrencias/adicionar/" class="btn btn-primary mb-3">Adicionar Ocorrência</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ocorrencia in ocorrencias %}
+            <tr>
+                <td>{{ ocorrencia.aluno }}</td>
+                <td>{{ ocorrencia.descricao }}</td>
+                <td>{{ ocorrencia.data }}</td>
+                <td>{{ ocorrencia.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

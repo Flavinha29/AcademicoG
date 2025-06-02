@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Avaliações</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Avaliações</h2>
+    <a href="/avaliacoes/adicionar/" class="btn btn-primary mb-3">Adicionar Avaliação</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for avaliacao in avaliacoes %}
+            <tr>
+                <td>{{ avaliacao.disciplina }}</td>
+                <td>{{ avaliacao.data }}</td>
+                <td>{{ avaliacao.tipo }}</td>
+                <td>{{ avaliacao.nota }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

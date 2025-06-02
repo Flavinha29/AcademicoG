@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Ocupações</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Ocupações Cadastradas</h2>
+    <a href="/ocupacoes/adicionar/" class="btn btn-primary mb-3">Adicionar Ocupação</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nome da Ocupação</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ocupacao in ocupacoes %}
+            <tr>
+                <td>{{ ocupacao.nome }}</td>
+                <td>{{ ocupacao.descricao }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

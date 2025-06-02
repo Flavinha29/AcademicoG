@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Frequências</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Frequências</h2>
+    <a href="/frequencias/adicionar/" class="btn btn-primary mb-3">Adicionar Frequência</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Disciplina</th>
+                <th>Data</th>
+                <th>Presença</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for frequencia in frequencias %}
+            <tr>
+                <td>{{ frequencia.aluno }}</td>
+                <td>{{ frequencia.disciplina }}</td>
+                <td>{{ frequencia.data }}</td>
+                <td>{{ frequencia.presenca }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
