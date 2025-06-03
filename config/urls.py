@@ -19,6 +19,6 @@ urlpatterns = [
     path('cidade/', CidadeView.as_view(), name='cidade'),
     path('ocupacao/', OcupacaoView.as_view(), name='ocupacao'),
     path('turno/', TurnoView.as_view(), name='turno'),
+    path('tipo_avaliacao/' , TiposAvaliacaoView.as_view() , name="avaliacao_tipo"),
+    path('disciplinas-por-curso/', DisciplinasPorCursoView.as_view(), name='disciplinas_por_curso'),
 ]
-
-
